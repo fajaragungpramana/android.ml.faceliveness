@@ -13,10 +13,14 @@ abstract class AppActivity<VB : ViewBinding> : AppCompatActivity() {
 
     protected abstract fun onViewBinding(): VB
 
+    protected abstract fun onCreated(savedInstanceState: Bundle?)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mViewBinding = onViewBinding()
         setContentView(viewBinding.root)
+
+        onCreated(savedInstanceState)
 
         if (this is AppObserver) onStateObserver()
     }
