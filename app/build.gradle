@@ -52,6 +52,8 @@ dependencies {
 
     implementation 'com.google.android.material:material:1.7.0'
 
+    implementation 'com.github.EKYCSolutions:ekyc-id-android:1.0.12'
+
 }
 
 kapt {
