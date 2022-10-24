@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
     id 'androidx.navigation.safeargs.kotlin'
 }
 
@@ -42,9 +44,16 @@ dependencies {
     implementation(project(":common"))
     implementation(project(":data"))
 
+    implementation 'com.google.dagger:hilt-android:2.44'
+    kapt 'com.google.dagger:hilt-compiler:2.44'
+
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
 
     implementation 'com.google.android.material:material:1.7.0'
 
+}
+
+kapt {
+    correctErrorTypes true
 }
