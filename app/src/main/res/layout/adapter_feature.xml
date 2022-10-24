@@ -4,6 +4,7 @@
     android:id="@+id/mtv_title"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
     android:padding="@dimen/dimen_16dp"
     android:textColor="@android:color/black"
     android:textStyle="bold"

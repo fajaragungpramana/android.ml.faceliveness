@@ -8,6 +8,19 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.github.fajaragungpramana.faceliveness.ui.MainFragment"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_livenessFragment"
+            app:destination="@id/livenessFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/livenessFragment"
+        android:name="com.github.fajaragungpramana.faceliveness.ui.liveness.LivenessFragment"
+        tools:layout="@layout/fragment_liveness" />
 
 </navigation>
