@@ -6,9 +6,9 @@ import javax.inject.Inject
 class FeatureDataSource @Inject constructor() : IFeatureDataSource {
 
     override suspend fun getListFeature(): List<FeatureEntity> = arrayListOf(
-        FeatureEntity(id = 1, title = "Liveness"),
-        FeatureEntity(id = 2, title = "Face Recognation"),
-        FeatureEntity(id = 3, title = "Fingerprint")
+        FeatureEntity(id = FeatureEntity.ID.Liveness, title = "Liveness"),
+        FeatureEntity(id = FeatureEntity.ID.FaceRecognition, title = "Face Recognition"),
+        FeatureEntity(id = FeatureEntity.ID.Fingerprint, title = "Fingerprint")
     )
 
 }

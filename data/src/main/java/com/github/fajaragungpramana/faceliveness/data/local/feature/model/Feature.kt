@@ -4,7 +4,7 @@ import androidx.recyclerview.widget.DiffUtil
 import com.github.fajaragungpramana.faceliveness.data.local.feature.entity.FeatureEntity
 
 data class Feature(
-    val id: Int? = null,
+    val id: FeatureEntity.ID? = null,
     val title: String? = null
 ) {
 
