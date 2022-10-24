@@ -9,7 +9,7 @@ import javax.inject.Inject
 class FeatureInteractor @Inject constructor(private val mFeatureRepository: IFeatureRepository) :
     FeatureUseCase {
 
-    override suspend fun getListFeature(): AppResult<Flow<List<Feature>>> =
+    override suspend fun getListFeature(): Flow<AppResult<List<Feature>>> =
         mFeatureRepository.getListFeature()
 
 }

@@ -6,6 +6,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface FeatureUseCase {
 
-    suspend fun getListFeature(): AppResult<Flow<List<Feature>>>
+    suspend fun getListFeature(): Flow<AppResult<List<Feature>>>
 
 }
